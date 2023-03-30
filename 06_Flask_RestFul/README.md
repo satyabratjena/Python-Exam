@@ -3,15 +3,16 @@
 
 This program is a Flask(*Flask RESTful API*) application for managing an inventory of computer accessories store. It uses a SQLAlchemy database to store information about the accessories, include accessory names, ordered quantities, remaining quantities, vendor names, purchase prices, selling prices, and the dates and times when they were added to the inventory.
 
-#Deployement -->
-
-To deploy this project run "app.py" file
-
 Url : http://http://127.0.0.1:5000
 
 
+## Description: 
 
-Description: 
+- app.py - Flask python file
+- index.html - To see details of accessories in tabular format using jinja.
+- inventory.db - It has the table for inventory of computer accessories.
+- Output_DEMO.docx - Screensorts of Project Output in POSTMAN and DB Browser.
+
 
 The program has four routes, one html page in templates folder, one inventory.db:
 
@@ -25,9 +26,7 @@ The '/delete/<id>/' route deletes an accessory with a given ID from the inventor
 
 The program also defines a Store class that represents an accessory in the inventory and a Marshmallow schema StoreSchema that serializes and deserializes the Store objects to and from JSON.
 
-- index.html - to see details of accessories in tabular format using jinja.
 
-- inventory.db - it has the table for inventory of computer accessories.
 
 
 ## Authors
