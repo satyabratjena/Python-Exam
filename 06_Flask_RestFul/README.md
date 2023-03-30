@@ -3,7 +3,7 @@
 
 This program is a Flask(*Flask RESTful API*) application for managing an inventory of computer accessories store. It uses a SQLAlchemy database to store information about the accessories, include accessory names, ordered quantities, remaining quantities, vendor names, purchase prices, selling prices, and the dates and times when they were added to the inventory.
 
-Url : http://http://127.0.0.1:5000
+Url : http://127.0.0.1:5000
 
 
 ## Description: 
