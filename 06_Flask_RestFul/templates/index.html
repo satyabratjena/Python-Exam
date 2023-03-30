@@ -1,0 +1,61 @@
+
+
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <title> {% block title %} {% endblock title %} - MyTodo</title>
+</head>
+
+<body>
+ <div class="container my-3">
+        <h2>Accessory List</h2>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">SNo</th>
+                            <th scope="col">Accessory</th>
+                            <th scope="col">Ordered Qty</th>
+                            <th scope="col">Remain Qty</th>
+                            <th scope="col">Vendor Name</th>
+                            <th scope="col">Purchase Price</th>
+                            <th scope="col">Selling Price</th>
+                            <th scope="col">Date of Adding</th>
+                            <th scope="col">Time of Adding</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+              {% for access in all_accessories %}
+              <tr>
+                <td>{{access.itemno}}</td>
+                <td>{{access.accessory}}</td>
+                <td>{{access.ordered_qty}}</td>
+                <td>{{access.remain_qty}}</td>
+                <td>{{access.vendorname}}</td>
+                <td>{{access.purchaseprice}}</td>
+                <td>{{access.sellingprice}}</td>
+                <td>{{access.dateofadding}}</td>
+                <td>{{access.timeofadding}}</td>
+
+              </tr>
+
+              {% endfor %}
+            </tbody>
+            </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
