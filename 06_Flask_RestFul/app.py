@@ -6,7 +6,7 @@ from marshmallow import Schema,fields,validate,validates,validates_schema,Valida
 
 import os
 
-# initliazing our flask app, SQLAlchemy and Marshmallow
+# Integrating Marshmallow serialization/deserialization library with Flask appication.
 app = Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -17,8 +17,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 app.app_context().push()
-ma = Marshmallow(app) #i defined a variable to Marshmallow application. so that when ever i need to call, I can call marshmallow by ma variable
-#here we using marshmallow for converting the objects into JSON
+ma = Marshmallow(app) 
 
 
 # creating database model
